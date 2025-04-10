@@ -1,0 +1,238 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+
+const metadata = {
+  title: 'Cloud Infrastructure & DevOps | ONRISE.software',
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="header">
+    <Header
+      position="left"
+      links={[
+        { text: 'AWS', href: '#aws' },
+        { text: 'Azure', href: '#azure' },
+        { text: 'GCP', href: '#gcp' },
+        { text: 'IaC', href: '#iac' },
+      ]}
+      actions={[
+        {
+          text: 'Start Your Project',
+          href: '/contact',
+          variant: 'primary',
+        },
+      ]}
+      isSticky
+    />
+  </Fragment>
+
+  <!-- Hero Widget ******************* -->
+
+  <Hero2
+    tagline="Cloud Infrastructure"
+    actions={[
+      { variant: 'primary', text: 'Get Started', href: '#contact' },
+      { text: 'Learn More', href: '#features' },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Cloud Infrastructure',
+    }}
+  >
+    <Fragment slot="title">
+      AWS Selected Partner & <span class="text-accent dark:text-white highlight">Cloud</span> Experts
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Empowering businesses with enterprise-grade cloud infrastructure and modern DevOps practices.
+      As an AWS Selected Partner, we deliver scalable, secure, and cost-effective cloud solutions.
+    </Fragment>
+  </Hero2>
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    title="Cloud Competencies"
+    subtitle="Comprehensive cloud expertise across major platforms and modern infrastructure tools"
+    columns={3}
+    items={[
+      {
+        title: 'AWS Partnership',
+        description: 'Official AWS Selected Partner with deep expertise in AWS services, architecture design, and implementation.',
+        icon: 'tabler:cloud',
+      },
+      {
+        title: 'Azure Solutions',
+        description: 'Expert implementation of Azure cloud services, focusing on enterprise integration and hybrid solutions.',
+        icon: 'tabler:cloud-computing',
+      },
+      {
+        title: 'Google Cloud',
+        description: 'Specialized in GCP services, particularly in data analytics, AI/ML infrastructure, and Kubernetes.',
+        icon: 'tabler:cloud-storm',
+      },
+      {
+        title: 'Infrastructure as Code',
+        description: 'Modern infrastructure automation using Terraform, Pulumi, and AWS CDK for consistent and scalable deployments.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'DevOps Excellence',
+        description: 'Implementing CI/CD pipelines, container orchestration, and automated infrastructure management.',
+        icon: 'tabler:refresh',
+      },
+      {
+        title: 'Cloud Security',
+        description: 'Enterprise-grade security implementation with compliance standards and best practices.',
+        icon: 'tabler:shield',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    id="aws"
+    title="AWS Selected Partner"
+    subtitle="Leveraging the full power of Amazon Web Services"
+    isReversed
+    items={[
+      {
+        title: 'Enterprise Solutions',
+        description: 'Design and implementation of scalable AWS architectures for enterprise workloads.',
+        icon: 'tabler:building',
+      },
+      {
+        title: 'Cost Optimization',
+        description: 'Expert AWS cost management and optimization strategies.',
+        icon: 'tabler:chart-dots',
+      },
+      {
+        title: 'AWS Well-Architected',
+        description: 'Following AWS Well-Architected Framework for reliable, secure, and efficient systems.',
+        icon: 'tabler:certificate',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'AWS Cloud Infrastructure',
+    }}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Cloud Infrastructure Impact"
+    stats={[
+      { title: 'Cloud Projects Delivered', amount: '200+' },
+      { title: 'Infrastructure Cost Saved', amount: '40%' },
+      { title: 'Deployment Time Reduced', amount: '75%' },
+      { title: 'Uptime SLA', amount: '99.99%' },
+    ]}
+  />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="iac"
+    title="Infrastructure as Code"
+    subtitle="Modern infrastructure automation with industry-leading tools"
+    columns={3}
+    items={[
+      {
+        title: 'Terraform',
+        description: 'HashiCorp Terraform implementation for multi-cloud infrastructure provisioning and management.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'AWS CDK',
+        description: 'Cloud Development Kit for AWS infrastructure using familiar programming languages.',
+        icon: 'tabler:code-dots',
+      },
+      {
+        title: 'Pulumi',
+        description: 'Modern infrastructure as code using your favorite programming languages.',
+        icon: 'tabler:code-circle',
+      },
+      {
+        title: 'Version Control',
+        description: 'Git-based infrastructure management with proper versioning and collaboration.',
+        icon: 'tabler:git-branch',
+      },
+      {
+        title: 'Automated Testing',
+        description: 'Comprehensive testing of infrastructure code for reliability and consistency.',
+        icon: 'tabler:test-pipe',
+      },
+      {
+        title: 'CI/CD Integration',
+        description: 'Seamless integration with CI/CD pipelines for automated infrastructure deployment.',
+        icon: 'tabler:refresh',
+      },
+    ]}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Infrastructure FAQs"
+    items={[
+      {
+        title: 'How do you ensure infrastructure security?',
+        description: 'We implement security at every layer using AWS security best practices, including VPC design, IAM policies, encryption, and security groups. Regular security audits and automated compliance checks are standard in our process.',
+      },
+      {
+        title: 'What is your approach to Infrastructure as Code?',
+        description: 'We use a combination of Terraform, Pulumi, and AWS CDK depending on project requirements. All infrastructure changes go through version control, code review, and automated testing before deployment.',
+      },
+      {
+        title: 'How do you handle cloud cost optimization?',
+        description: 'We implement FinOps practices, including resource tagging, automated scaling, spot instances where applicable, and regular cost analysis. Our solutions typically achieve 30-40% cost reduction.',
+      },
+      {
+        title: 'What is your disaster recovery strategy?',
+        description: 'We design multi-region architectures with automated failover, regular backups, and documented recovery procedures. Our DR solutions are tested regularly to ensure reliability.',
+      },
+    ]}
+  />
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps2
+    title="Start Your Cloud Journey"
+    subtitle="Let's build your cloud infrastructure together"
+    callToAction={{
+      text: 'Contact us',
+      href: '/contact',
+    }}
+    items={[
+      {
+        title: 'Initial Assessment',
+        description: 'Cloud readiness evaluation',
+        icon: 'tabler:clipboard',
+      },
+      {
+        title: 'Architecture Design',
+        description: 'Cloud-native solution design',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Implementation',
+        description: 'Infrastructure deployment',
+        icon: 'tabler:code',
+      },
+    ]}
+  />
+
+</Layout>
+

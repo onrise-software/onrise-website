@@ -30,38 +30,42 @@ export const headerData = {
           text: 'Backend',
           href: getPermalink('/technologies/backend'),
         },
+        {
+          text: 'Infrastructure',
+          href: getPermalink('/technologies/infrastructure'),
+        },
       ],
     },
-    {
-      text: 'Pages',
-      links: [
-        {
-          text: 'Features (Anchor Link)',
-          href: getPermalink('/#features'),
-        },
+    // {
+    //   text: 'Pages',
+    //   links: [
+    //     {
+    //       text: 'Features (Anchor Link)',
+    //       href: getPermalink('/#features'),
+    //     },
 
-        {
-          text: 'Pricing',
-          href: getPermalink('/pricing'),
-        },
-        {
-          text: 'About us',
-          href: getPermalink('/about'),
-        },
-        {
-          text: 'Contact',
-          href: getPermalink('/contact'),
-        },
-        {
-          text: 'Terms',
-          href: getPermalink('/terms'),
-        },
-        {
-          text: 'Privacy policy',
-          href: getPermalink('/privacy'),
-        },
-      ],
-    },
+    //     {
+    //       text: 'Pricing',
+    //       href: getPermalink('/pricing'),
+    //     },
+    //     {
+    //       text: 'About us',
+    //       href: getPermalink('/about'),
+    //     },
+    //     {
+    //       text: 'Contact',
+    //       href: getPermalink('/contact'),
+    //     },
+    //     {
+    //       text: 'Terms',
+    //       href: getPermalink('/terms'),
+    //     },
+    //     {
+    //       text: 'Privacy policy',
+    //       href: getPermalink('/privacy'),
+    //     },
+    //   ],
+    // },
     // {
     //   text: 'Landing',
     //   links: [
