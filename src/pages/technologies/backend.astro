@@ -1,0 +1,304 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import Stats from '~/components/widgets/Stats.astro';
+
+import { headerData } from '~/navigation';
+
+const metadata = {
+  title: 'Backend Development | ONRISE.software',
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="header">
+    <Header
+      position="left"
+      links={[
+        { text: '.NET', href: '#dotnet' },
+        { text: 'TypeScript', href: '#typescript' },
+        { text: 'Golang', href: '#golang' },
+      ]}
+      actions={[
+        {
+          text: 'Start Your Project',
+          href: '/contact',
+          variant: 'primary',
+        },
+      ]}
+      isSticky
+    />
+  </Fragment>
+
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero2
+    tagline="Modern Backend Development"
+    actions={[
+      { variant: 'primary', text: 'Explore Solutions', href: '#features' },
+      { text: 'Contact Us', href: '/contact' },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Modern Backend Architecture',
+    }}
+  >
+    <Fragment slot="title">
+      Enterprise-Grade <span class="text-accent dark:text-white highlight">Backend</span> Solutions
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Building scalable, resilient backend systems using cutting-edge technologies and modern architectural patterns.
+      From microservices to serverless, we deliver high-performance solutions that power your business.
+    </Fragment>
+  </Hero2>
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    title="Core Technologies"
+    subtitle="We leverage industry-leading technologies and frameworks to build robust backend solutions."
+    columns={3}
+    items={[
+      {
+        title: '.NET Development',
+        description: 'Building enterprise-grade applications with .NET 8, C#, and ASP.NET Core. Leveraging the power of minimal APIs, dependency injection, and cloud-native features.',
+        icon: 'tabler:code-dots',
+      },
+      {
+        title: 'TypeScript & Node.js',
+        description: 'Creating scalable backend services with TypeScript, Express, and NestJS. Strong typing and modern JavaScript features for reliable server-side applications.',
+        icon: 'tabler:brand-typescript',
+      },
+      {
+        title: 'Golang Excellence',
+        description: 'Developing high-performance microservices with Go, utilizing its concurrency model and standard library for efficient, reliable systems.',
+        icon: 'tabler:brand-golang',
+      },
+      {
+        title: 'Microservices Architecture',
+        description: 'Designing and implementing distributed systems using microservices patterns, service mesh, and container orchestration.',
+        icon: 'tabler:network',
+      },
+      {
+        title: 'Cloud-Native Development',
+        description: 'Building applications optimized for cloud deployment using containers, Kubernetes, and cloud-native design patterns.',
+        icon: 'tabler:cloud',
+      },
+      {
+        title: 'API-First Design',
+        description: 'Creating RESTful and GraphQL APIs with OpenAPI specifications, strong typing, and comprehensive documentation.',
+        icon: 'tabler:api',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    id="dotnet"
+    title="Modern .NET Development"
+    subtitle="Leveraging the power of .NET ecosystem for enterprise solutions"
+    isReversed
+    items={[
+      {
+        title: 'ASP.NET Core & Minimal APIs',
+        description: 'Building high-performance web APIs with minimal APIs and the latest ASP.NET Core features.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Entity Framework Core',
+        description: 'Efficient data access with EF Core, including advanced features like compiled queries and spatial data support.',
+        icon: 'tabler:database',
+      },
+      {
+        title: 'gRPC Services',
+        description: 'High-performance RPC communication between services using gRPC and protocol buffers.',
+        icon: 'tabler:arrows-right-left',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1618477247222-acbdb0e159b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1674&q=80',
+      alt: '.NET Development',
+    }}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    id="typescript"
+    items={[
+      {
+        title: 'NestJS Framework',
+        description: 'Enterprise Node.js framework with TypeScript, offering robust architecture patterns and dependency injection.',
+        icon: 'tabler:brand-nodejs',
+      },
+      {
+        title: 'Type Safety',
+        description: 'End-to-end type safety with TypeScript, reducing runtime errors and improving maintainability.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Modern JavaScript',
+        description: 'Leveraging latest ECMAScript features and TypeScript enhancements for cleaner, more maintainable code.',
+        icon: 'tabler:code',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1619410283995-43d9134e7656?ixlib=rb-4.0.3&auto=format&fit=crop&w=1674&q=80',
+      alt: 'TypeScript Development',
+    }}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    id="golang"
+    isReversed
+    items={[
+      {
+        title: 'High Performance',
+        description: 'Utilizing Go\'s powerful concurrency model with goroutines and channels for efficient parallel processing.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Standard Library',
+        description: 'Leveraging Go\'s rich standard library for networking, HTTP services, and system programming.',
+        icon: 'tabler:package',
+      },
+      {
+        title: 'Microservices Ready',
+        description: 'Building cloud-native microservices with Go\'s excellent support for containerization and distributed systems.',
+        icon: 'tabler:network',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1629654297299-c8506221ca97?ixlib=rb-4.0.3&auto=format&fit=crop&w=1674&q=80',
+      alt: 'Golang Development',
+    }}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Our Backend Development Impact"
+    stats={[
+      { title: 'Microservices Deployed', amount: '500+' },
+      { title: 'Response Time', amount: '<100ms' },
+      { title: 'Uptime SLA', amount: '99.99%' },
+      { title: 'API Requests/Day', amount: '1M+' },
+    ]}
+  />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    title="Modern Architecture Patterns"
+    subtitle="We implement cutting-edge architectural patterns to build scalable, maintainable systems."
+    columns={3}
+    items={[
+      {
+        title: 'Microservices Architecture',
+        description: 'Decomposing applications into small, independent services that communicate via APIs, enabling scalability and maintainability.',
+        icon: 'tabler:network',
+      },
+      {
+        title: 'Event-Driven Architecture',
+        description: 'Building reactive systems with event sourcing and CQRS patterns for better scalability and responsiveness.',
+        icon: 'tabler:route',
+      },
+      {
+        title: 'Domain-Driven Design',
+        description: 'Implementing DDD principles to create maintainable, business-aligned software architectures.',
+        icon: 'tabler:hexagon',
+      },
+      {
+        title: 'Serverless Computing',
+        description: 'Utilizing serverless architectures for cost-effective, automatically scaling solutions.',
+        icon: 'tabler:cloud-computing',
+      },
+      {
+        title: 'Container Orchestration',
+        description: 'Managing microservices with Kubernetes for automated deployment, scaling, and management.',
+        icon: 'tabler:box',
+      },
+      {
+        title: 'API Gateway Pattern',
+        description: 'Implementing API gateways for routing, authentication, and request aggregation in microservices.',
+        icon: 'tabler:route-2',
+      },
+    ]}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Backend Development FAQs"
+    items={[
+      {
+        title: 'How do you choose between .NET, TypeScript, and Go?',
+        description: 'We select technologies based on specific project requirements. .NET excels in enterprise applications, TypeScript is great for full-stack JavaScript projects, and Go is perfect for high-performance microservices and system programming.',
+      },
+      {
+        title: 'What is your approach to microservices?',
+        description: 'We follow a pragmatic approach to microservices, carefully considering service boundaries, data consistency, and operational complexity. We use tools like Docker and Kubernetes for deployment and management.',
+      },
+      {
+        title: 'How do you handle data consistency in distributed systems?',
+        description: 'We implement patterns like Saga for distributed transactions, event sourcing for audit trails, and CQRS for scalable read/write operations. We also use message brokers for reliable async communication.',
+      },
+      {
+        title: 'What about security and monitoring?',
+        description: 'Security is built-in from the start with OAuth2/OpenID Connect, API authentication, and encryption. We implement comprehensive monitoring using tools like Prometheus and Grafana.',
+      },
+    ]}
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Start Your Backend Project"
+    subtitle="Ready to build a robust backend solution? Let's discuss your requirements."
+    callToAction={{
+      text: 'Contact us',
+      href: '/contact',
+    }}
+    items={[
+      {
+        title: 'Initial Consultation',
+        description: 'Discuss your requirements',
+        icon: 'tabler:messages',
+      },
+      {
+        title: 'Architecture Design',
+        description: 'Plan your solution',
+        icon: 'tabler:network',
+      },
+      {
+        title: 'Development',
+        description: 'Build and deploy',
+        icon: 'tabler:code',
+      },
+    ]}
+  />
+
+  <!-- BlogLatestPost Widget **************** -->
+
+  <BlogLatestPosts
+    id="blog"
+    title="Stay informed with AstroWind's blog"
+    information={`Explore our collection of articles, guides, and tutorials on web development, design trends, and using AstroWind effectively for your projects.`}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </BlogLatestPosts>
+</Layout>

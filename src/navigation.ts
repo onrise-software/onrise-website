@@ -27,16 +27,8 @@ export const headerData = {
           href: getPermalink('/technologies/frontend'),
         },
         {
-          text: 'Startup',
-          href: getPermalink('/homes/startup'),
-        },
-        {
-          text: 'Mobile App',
-          href: getPermalink('/homes/mobile-app'),
-        },
-        {
-          text: 'Personal',
-          href: getPermalink('/homes/personal'),
+          text: 'Backend',
+          href: getPermalink('/technologies/backend'),
         },
       ],
     },
