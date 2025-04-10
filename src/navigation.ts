@@ -1,13 +1,26 @@
+import { link } from 'node:fs';
 import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
   links: [
     {
       text: 'Homes',
+      href: getPermalink('/'),
+    },
+    {
+      text: 'Services',
+      href: getPermalink('/services'),
+    },
+    {
+      text: 'Technologies',
       links: [
         {
-          text: 'SaaS',
-          href: getPermalink('/homes/saas'),
+          text: 'AI Agent',
+          href: getPermalink('/technologies/ai-agent'),
+        },
+        {
+          text: 'Mobile App',
+          href: getPermalink('/technologies/mobile-app'),
         },
         {
           text: 'Startup',
@@ -22,10 +35,6 @@ export const headerData = {
           href: getPermalink('/homes/personal'),
         },
       ],
-    },
-    {
-      text: 'Services',
-      href: getPermalink('/services'),
     },
     {
       text: 'Pages',
@@ -57,35 +66,35 @@ export const headerData = {
         },
       ],
     },
-    {
-      text: 'Landing',
-      links: [
-        {
-          text: 'Lead Generation',
-          href: getPermalink('/landing/lead-generation'),
-        },
-        {
-          text: 'Long-form Sales',
-          href: getPermalink('/landing/sales'),
-        },
-        {
-          text: 'Click-Through',
-          href: getPermalink('/landing/click-through'),
-        },
-        {
-          text: 'Product Details (or Services)',
-          href: getPermalink('/landing/product'),
-        },
-        {
-          text: 'Coming Soon or Pre-Launch',
-          href: getPermalink('/landing/pre-launch'),
-        },
-        {
-          text: 'Subscription',
-          href: getPermalink('/landing/subscription'),
-        },
-      ],
-    },
+    // {
+    //   text: 'Landing',
+    //   links: [
+    //     {
+    //       text: 'Lead Generation',
+    //       href: getPermalink('/landing/lead-generation'),
+    //     },
+    //     {
+    //       text: 'Long-form Sales',
+    //       href: getPermalink('/landing/sales'),
+    //     },
+    //     {
+    //       text: 'Click-Through',
+    //       href: getPermalink('/landing/click-through'),
+    //     },
+    //     {
+    //       text: 'Product Details (or Services)',
+    //       href: getPermalink('/landing/product'),
+    //     },
+    //     {
+    //       text: 'Coming Soon or Pre-Launch',
+    //       href: getPermalink('/landing/pre-launch'),
+    //     },
+    //     {
+    //       text: 'Subscription',
+    //       href: getPermalink('/landing/subscription'),
+    //     },
+    //   ],
+    // },
     {
       text: 'Blog',
       links: [
@@ -110,6 +119,10 @@ export const headerData = {
           href: getPermalink('astro', 'tag'),
         },
       ],
+    },
+    {
+      text: 'About us',
+      href: getPermalink('/about'),
     },
     {
       text: 'Contact',

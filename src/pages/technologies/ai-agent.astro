@@ -1,0 +1,229 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+
+import { headerData } from '~/data/navigation';
+
+const metadata = {
+  title: 'AI Agent Technologies | ONRISE.software',
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="header">
+    <Header
+      actions={[
+        {
+          variant: 'primary',
+          text: 'Get Started',
+          href: '/contact',
+        },
+      ]}
+      isSticky
+    />
+  </Fragment>
+
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero2
+    tagline="AI Agent Technology"
+    actions={[
+      { variant: 'primary', text: 'Start Your AI Journey', href: '/contact' },
+      { text: 'Learn more', href: '#features' },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'AI Agent Technology',
+    }}
+  >
+    <Fragment slot="title">
+      Powering the Future with <span class="text-accent dark:text-white highlight">Intelligent</span> AI Agents
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        Discover the cutting-edge technologies that power our AI agents, combining advanced machine learning, natural language processing,
+        and cognitive architectures to create truly intelligent solutions.
+      </span>
+    </Fragment>
+  </Hero2>
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    title="Core Technologies"
+    subtitle="Our AI agents are built on a foundation of advanced technologies that work together to create intelligent, autonomous systems."
+    columns={2}
+    items={[
+      {
+        title: 'Large Language Models (LLMs)',
+        description:
+          'Leveraging state-of-the-art language models like GPT-4 and Claude, our agents understand and generate human-like text, enabling natural interactions and complex problem-solving capabilities.',
+        icon: 'tabler:brain',
+      },
+      {
+        title: 'Natural Language Processing',
+        description: 'Advanced NLP capabilities enable our agents to understand context, sentiment, and intent, making human-AI interactions more natural and effective.',
+        icon: 'tabler:message-circle-2',
+      },
+      {
+        title: 'Machine Learning & Neural Networks',
+        description:
+          'Deep learning architectures and neural networks allow our agents to learn from experience, adapt to new situations, and make intelligent decisions based on data.',
+        icon: 'tabler:network',
+      },
+      {
+        title: 'Cognitive Architecture',
+        description: 'Sophisticated cognitive frameworks enable reasoning, planning, and decision-making, allowing agents to handle complex tasks and solve problems autonomously.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Knowledge Graphs',
+        description: 'Structured knowledge representations help agents understand relationships between concepts and make informed decisions based on comprehensive domain knowledge.',
+        icon: 'tabler:chart-dots',
+      },
+      {
+        title: 'Reinforcement Learning',
+        description: 'Agents learn optimal behaviors through interaction with their environment, continuously improving their performance and decision-making capabilities.',
+        icon: 'tabler:refresh',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    title="Advanced Capabilities"
+    subtitle="Our AI agents combine multiple technologies to deliver sophisticated functionality and intelligent behavior."
+    isReversed
+    items={[
+      {
+        title: 'Autonomous Decision Making',
+        description:
+          'AI agents utilize advanced algorithms and decision trees to make informed choices independently, considering multiple factors and potential outcomes to select the optimal course of action.',
+      },
+      {
+        title: 'Adaptive Learning',
+        description: 'Through continuous learning and feedback loops, agents improve their performance over time, adapting to new situations and evolving requirements.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1671&q=80',
+      alt: 'AI Agent Capabilities',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Intelligence in Action
+      </h3>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Multi-Agent Systems',
+        description: 'Our agents can work collaboratively in distributed systems, sharing information and coordinating actions to solve complex problems that require multiple perspectives and capabilities.',
+      },
+      {
+        title: 'Integration Capabilities',
+        description: 'Seamless integration with existing systems and APIs allows our agents to work within your current technology stack, enhancing rather than replacing your existing solutions.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1676277791608-ac54954d0893?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1658&q=80',
+      alt: 'AI Integration',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Collaborative Intelligence
+      </h3>
+    </Fragment>
+  </Content>
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Technical FAQ"
+    items={[
+      {
+        title: 'How do AI agents make decisions?',
+        description:
+          'Our AI agents use a combination of machine learning models, decision trees, and cognitive architectures to analyze situations and make informed decisions. They consider multiple factors, historical data, and predicted outcomes to choose the best course of action.',
+        icon: 'tabler:brain',
+      },
+      {
+        title: 'What types of tasks can AI agents handle?',
+        description: 'AI agents can handle a wide range of tasks from simple automation to complex decision-making. This includes data analysis, customer service, process automation, predictive maintenance, and more. The key is proper training and configuration for your specific use case.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'How do AI agents learn and improve over time?',
+        description:
+          'Agents utilize reinforcement learning and feedback mechanisms to continuously improve their performance. They learn from each interaction, updating their models and decision-making processes based on outcomes and user feedback.',
+        icon: 'tabler:refresh',
+      },
+      {
+        title: 'What security measures are in place for AI agents?',
+        description: 'We implement multiple layers of security, including encryption, access controls, and continuous monitoring. All agent activities are logged and audited, and we follow strict data privacy guidelines to protect sensitive information.',
+        icon: 'tabler:shield-lock',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </FAQs>
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Start Your AI Journey"
+    subtitle="Ready to implement AI agents in your business? Contact us to discuss your needs and discover how our technology can help."
+    callToAction={{
+      text: 'Contact us',
+      href: '/contact',
+    }}
+    items={[
+      {
+        title: 'Schedule a Demo',
+        description: 'See our AI agents in action',
+        icon: 'tabler:presentation',
+      },
+      {
+        title: 'Technical Consultation',
+        description: 'Discuss your specific needs',
+        icon: 'tabler:messages',
+      },
+      {
+        title: 'Custom Solution Design',
+        description: 'Get a tailored implementation plan',
+        icon: 'tabler:tool',
+      },
+    ]}
+  />
+
+  <!-- BlogLatestPost Widget **************** -->
+
+  <BlogLatestPosts
+    id="blog"
+    title="Latest AI Insights"
+    information={`Stay updated with the latest developments in AI agent technology and learn how businesses are implementing intelligent solutions.`}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </BlogLatestPosts>
+</Layout>

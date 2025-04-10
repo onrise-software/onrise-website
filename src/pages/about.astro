@@ -7,7 +7,7 @@ import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'About us',
+  title: 'About ONRISE.software | Leading AI Solutions Agency',
 };
 ---
 
@@ -17,59 +17,60 @@ const metadata = {
   <Hero
     tagline="About us"
     image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Caos Image',
+      src: 'https://images.unsplash.com/photo-1685208424731-1d76dff0d11d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'ONRISE.software Team Collaboration',
     }}
   >
     <Fragment slot="title">
-      Elevate your online presence with our <br />
-      <span class="text-accent dark:text-white highlight"> Beautiful Website Templates</span>
+      Pioneering the Future of <br />
+      <span class="text-accent dark:text-white highlight">AI Innovation</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue. Donec
-      quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex a nunc convallis, et lobortis nisi tempus.
-      Suspendisse vitae nisi eget tortor luctus maximus sed non lectus.
+      At ONRISE.software, we're passionate about transforming businesses through innovative AI solutions. Our team of expert 
+      engineers and developers combines cutting-edge technology with deep industry expertise to create intelligent solutions 
+      that drive real business value. We believe in the power of AI to enhance human capabilities and create more efficient, 
+      productive, and intelligent organizations.
     </Fragment>
   </Hero>
 
   <!-- Stats Widget ****************** -->
 
   <Stats
-    title="Statistics about us"
+    title="Our Impact in Numbers"
     stats={[
-      { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '248' },
-      { title: 'Templates', amount: '12' },
-      { title: 'Awards', amount: '24' },
+      { title: 'Projects Delivered', amount: '200+' },
+      { title: 'AI Models Deployed', amount: '500+' },
+      { title: 'Client Success Rate', amount: '98%' },
+      { title: 'Team Experts', amount: '50+' },
     ]}
   />
 
   <!-- Features3 Widget ************** -->
 
   <Features3
-    title="Our templates"
-    subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
+    title="Our Expertise"
+    subtitle="We specialize in developing cutting-edge AI solutions that help businesses automate processes, enhance decision-making, and drive innovation."
     columns={3}
     isBeforeContent={true}
     items={[
       {
-        title: 'Educational',
+        title: 'AI Development',
         description:
-          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
-        icon: 'tabler:template',
+          'Building custom AI agents and solutions that automate complex tasks, enhance productivity, and deliver measurable business results.',
+        icon: 'tabler:robot',
       },
       {
-        title: 'Interior Design',
+        title: 'Machine Learning',
         description:
-          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
-        icon: 'tabler:template',
+          'Creating intelligent systems that learn and improve from experience, providing predictive insights and data-driven decision support.',
+        icon: 'tabler:brain',
       },
       {
-        title: 'Photography',
+        title: 'Natural Language Processing',
         description:
-          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
-        icon: 'tabler:template',
+          'Developing sophisticated NLP solutions that enable natural human-computer interaction and automated content analysis.',
+        icon: 'tabler:message-circle-2',
       },
     ]}
   />
@@ -81,68 +82,68 @@ const metadata = {
     isAfterContent={true}
     items={[
       {
-        title: 'E-commerce',
+        title: 'Computer Vision',
         description:
-          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
-        icon: 'tabler:template',
+          'Implementing advanced image and video analysis systems for object detection, recognition, and visual quality control.',
+        icon: 'tabler:eye',
       },
       {
-        title: 'Blog',
+        title: 'Cloud Solutions',
         description:
-          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
-        icon: 'tabler:template',
+          'Designing and deploying scalable AI solutions in the cloud, ensuring high availability and optimal performance.',
+        icon: 'tabler:cloud',
       },
       {
-        title: 'Business',
+        title: 'Data Analytics',
         description:
-          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
-        icon: 'tabler:template',
+          'Transforming raw data into actionable insights through advanced analytics and visualization techniques.',
+        icon: 'tabler:chart-dots',
       },
       {
-        title: 'Branding',
+        title: 'Process Automation',
         description:
-          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
-        icon: 'tabler:template',
+          'Streamlining business operations with intelligent automation solutions that reduce costs and improve efficiency.',
+        icon: 'tabler:settings-automation',
       },
       {
-        title: 'Medical',
+        title: 'API Development',
         description:
-          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
-        icon: 'tabler:template',
+          'Creating robust APIs that enable seamless integration of AI capabilities into existing systems and applications.',
+        icon: 'tabler:api',
       },
       {
-        title: 'Fashion Design',
+        title: 'AI Consulting',
         description:
-          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
-        icon: 'tabler:template',
+          'Providing expert guidance on AI strategy, implementation, and optimization to maximize technology investments.',
+        icon: 'tabler:bulb',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Colorful Image',
+      src: 'https://images.unsplash.com/photo-1665686377065-08ba896d16fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+      alt: 'AI Innovation Hub',
     }}
   />
 
   <!-- Steps2 Widget ****************** -->
 
   <Steps2
-    title="Our values"
-    subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
+    title="Our Core Values"
+    subtitle="At ONRISE.software, our values guide everything we do, from how we develop solutions to how we interact with our clients."
     items={[
       {
-        title: 'Customer-centric approach',
+        title: 'Innovation Excellence',
         description:
-          'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
+          'We continuously push the boundaries of what\'s possible with AI, staying at the forefront of technological advancement to deliver cutting-edge solutions.',
       },
       {
-        title: 'Constant Improvement',
+        title: 'Client Success',
         description:
-          'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
+          'Your success is our success. We\'re committed to understanding your unique challenges and delivering solutions that exceed expectations.',
       },
       {
-        title: 'Ethical Practices',
+        title: 'Ethical AI Development',
         description:
-          'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+          'We believe in developing AI solutions responsibly, ensuring transparency, fairness, and privacy in everything we create.',
       },
     ]}
   />
@@ -150,30 +151,30 @@ const metadata = {
   <!-- Steps2 Widget ****************** -->
 
   <Steps2
-    title="Achievements"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
+    title="Why Choose ONRISE.software"
+    subtitle="We combine technical expertise with business acumen to deliver AI solutions that create real value for our clients."
     isReversed={true}
     callToAction={{
-      text: 'See more',
-      href: '/',
+      text: 'Start Your AI Journey',
+      href: '/contact',
     }}
     items={[
       {
-        title: 'Global reach',
-        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
-        icon: 'tabler:globe',
+        title: 'Deep Technical Expertise',
+        description: 'Our team of AI experts and engineers brings years of experience in developing sophisticated AI solutions across industries.',
+        icon: 'tabler:code',
       },
       {
-        title: 'Positive customer feedback and reviews',
+        title: 'Proven Track Record',
         description:
-          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
-        icon: 'tabler:message-star',
+          'With hundreds of successful projects delivered, we have the experience and expertise to ensure your project\'s success.',
+        icon: 'tabler:chart-arrows-vertical',
       },
       {
-        title: 'Awards and recognition as industry experts',
+        title: 'End-to-End Support',
         description:
-          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
-        icon: 'tabler:award',
+          'From initial consultation to deployment and ongoing maintenance, we provide comprehensive support throughout your AI journey.',
+        icon: 'tabler:refresh',
       },
     ]}
   />
@@ -181,25 +182,24 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Our locations"
-    tagline="Find us"
-    columns={4}
+    title="Global Presence"
+    tagline="Where to Find Us"
+    columns={3}
     items={[
       {
-        title: 'EE.UU',
-        description: '1234 Lorem Ipsum St, 12345, Miami',
+        title: 'San Francisco',
+        description: 'Main Office - AI Innovation Hub',
+        icon: 'tabler:building',
       },
       {
-        title: 'Spain',
-        description: '5678 Lorem Ipsum St, 56789, Madrid',
+        title: 'New York',
+        description: 'East Coast Operations',
+        icon: 'tabler:building',
       },
       {
-        title: 'Australia',
-        description: '9012 Lorem Ipsum St, 90123, Sydney',
-      },
-      {
-        title: 'Brazil',
-        description: '3456 Lorem Ipsum St, 34567, São Paulo',
+        title: 'London',
+        description: 'European Headquarters',
+        icon: 'tabler:building',
       },
     ]}
   />
@@ -207,20 +207,20 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Technical Support"
-    tagline="Contact us"
+    title="Get in Touch"
+    tagline="Contact Us"
     columns={2}
     items={[
       {
-        title: 'Chat with us',
+        title: 'Schedule a Consultation',
         description:
-          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
-        icon: 'tabler:messages',
+          'Discuss your AI needs with our experts and discover how we can help transform your business.',
+        icon: 'tabler:calendar',
       },
       {
-        title: 'Call us',
+        title: 'Technical Support',
         description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
+          'Our support team is available 24/7 to assist you with any technical questions or challenges.',
         icon: 'tabler:headset',
       },
     ]}
