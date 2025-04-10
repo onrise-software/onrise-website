@@ -23,6 +23,10 @@ export const headerData = {
           href: getPermalink('/technologies/mobile-app'),
         },
         {
+          text: 'Frontend',
+          href: getPermalink('/technologies/frontend'),
+        },
+        {
           text: 'Startup',
           href: getPermalink('/homes/startup'),
         },

@@ -2,7 +2,6 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Header from '~/components/widgets/Header.astro';
-
 import Hero2 from '~/components/widgets/Hero2.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Features3 from '~/components/widgets/Features3.astro';
@@ -14,14 +13,8 @@ import Stats from '~/components/widgets/Stats.astro';
 import Button from '~/components/ui/Button.astro';
 import Image from '~/components/common/Image.astro';
 
-const appStoreImg = '~/assets/images/app-store.png';
-const appStoreDownloadLink = 'https://github.com/onwidget/astrowind';
-
-const googlePlayImg = '~/assets/images/google-play.png';
-const googlePlayDownloadLink = 'https://github.com/onwidget/astrowind';
-
 const metadata = {
-  title: 'Mobile App Homepage',
+  title: 'Mobile App Development | ONRISE.software',
 };
 ---
 
@@ -31,14 +24,14 @@ const metadata = {
     <Header
       position="left"
       links={[
-        { text: 'Services', href: '#' },
-        { text: 'Features', href: '#' },
-        { text: 'About', href: '#' },
+        { text: 'React Native', href: '#react-native' },
+        { text: 'Flutter', href: '#flutter' },
+        { text: 'Native Apps', href: '#native' },
       ]}
       actions={[
         {
-          text: 'Download',
-          href: '#download',
+          text: 'Start Your Project',
+          href: '/contact',
         },
       ]}
       isSticky
@@ -49,33 +42,26 @@ const metadata = {
   <!-- Hero2 Widget ******************* -->
 
   <Hero2
-    tagline="Mobile App Web Demo"
+    tagline="Mobile App Development"
     image={{
-      src: 'https://images.unsplash.com/photo-1535303311164-664fc9ec6532?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'AstroWind Hero Image',
+      src: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+      alt: 'Mobile App Development',
     }}
   >
     <Fragment slot="title">
-      <span class="text-accent dark:text-white highlight">AstroWind App</span>: <br /> professional websites <span
-        class="hidden xl:inline">made easy</span
-      >
+      Cross-Platform & Native <span class="text-accent dark:text-white highlight">Mobile Development</span> Expertise
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        Unlock boundless creativity at your fingertips: your gateway to innovative design.
+        Transform your ideas into powerful mobile applications using cutting-edge technologies like React Native and Flutter.
       </span>
-      Download now and embark on a journey to elevate your projects like never before.
+      We deliver exceptional mobile experiences for both iOS and Android platforms.
     </Fragment>
 
     <div slot="actions" class="flex max-w-sm gap-4">
-      <Button variant="link" href={appStoreDownloadLink}>
-        <Image src={appStoreImg} alt="App Store Image" width={200} />
-      </Button>
-
-      <Button variant="link" href={googlePlayDownloadLink}>
-        <Image src={googlePlayImg} alt="Google Play Image" width={200} />
-      </Button>
+      <Button variant="primary" href="#features">Explore Our Expertise</Button>
+      <Button variant="link" href="/contact">Contact Us</Button>
     </div>
   </Hero2>
 
@@ -83,196 +69,168 @@ const metadata = {
 
   <Features3
     id="features"
-    title="How to use our app?"
-    subtitle="Tired of spending hours crafting documents from scratch? Our app offers an innovative solution. With a wide array of professionally designed templates, you can now create stunning documents in minutes. Explore our templates now and experience the difference."
-    tagline="Step-by-step guide"
+    title="Why Choose Our Mobile Development Services?"
+    subtitle="We combine the power of cross-platform frameworks with native expertise to deliver high-performance, scalable mobile applications that your users will love."
+    tagline="Our Expertise"
     columns={2}
     items={[
       {
-        title: 'Download and install the app',
-        description: `Begin your journey by downloading our user-friendly app from your device's app store or our official website.`,
-        icon: 'tabler:square-number-1',
+        title: 'React Native Development',
+        description: 'Build cross-platform applications with native performance using React Native. Perfect for businesses looking to reach both iOS and Android users with a single codebase.',
+        icon: 'tabler:brand-react',
       },
       {
-        title: 'Sign up',
-        description:
-          'Create your account by providing the necessary information, enabling you to access our full range of features.',
-        icon: 'tabler:square-number-2',
+        title: 'Flutter Excellence',
+        description: 'Create beautiful, natively compiled applications from a single codebase with Flutter. Ideal for stunning UIs and smooth animations across all platforms.',
+        icon: 'tabler:brand-flutter',
       },
       {
-        title: 'Browse templates',
-        description: 'Explore our diverse collection of website templates, categorized for easy navigation.',
-        icon: 'tabler:square-number-3',
+        title: 'Native iOS Development',
+        description: 'Leverage the full power of Swift and iOS platform features to create premium experiences for Apple users.',
+        icon: 'tabler:brand-apple',
       },
       {
-        title: 'Preview and select a template',
-        description: `Visualize the potential of each template through previews, then choose the one that aligns best with your project's needs.`,
-        icon: 'tabler:square-number-4',
+        title: 'Native Android Development',
+        description: 'Build robust Android applications using Kotlin, taking advantage of the latest platform capabilities and Material Design.',
+        icon: 'tabler:brand-android',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1521517407911-565264e7d82d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80',
-      alt: 'Colorful Image',
+      src: 'https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
+      alt: 'Mobile Development Process',
     }}
   />
 
   <!-- Content Widget **************** -->
 
   <Content
+    id="react-native"
     isReversed
     items={[
       {
-        title: 'User-friendly interface',
-        description:
-          'An intuitive and easy-to-navigate interface that allows users to quickly browse and find the templates they need.',
-        icon: 'tabler:wand',
+        title: 'Cross-Platform Efficiency',
+        description: 'Share up to 90% of code between iOS and Android platforms, significantly reducing development time and costs.',
+        icon: 'tabler:code',
       },
       {
-        title: 'Personalization options',
-        description:
-          'Include basic customization tools that let users modify text, colors, images, and other elements within the templates.',
-        icon: 'tabler:settings',
+        title: 'Native Performance',
+        description: 'Achieve near-native performance with direct access to platform-specific APIs and components.',
+        icon: 'tabler:chart-line',
       },
       {
-        title: 'Ready-to-use components',
-        description:
-          'Enhance your designs with ready-to-use elements like graphics, icons, and layouts, saving you time and boosting visual appeal.',
-        icon: 'tabler:template',
+        title: 'Hot Reloading',
+        description: 'Faster development cycles with instant feedback on code changes without losing application state.',
+        icon: 'tabler:refresh',
       },
       {
-        title: 'Preview Mode',
-        description: 'Provide a preview of each template, allowing users to see how it looks before making a purchase.',
-        icon: 'tabler:carousel-horizontal',
+        title: 'Large Ecosystem',
+        description: 'Access to a vast collection of pre-built components and third-party libraries.',
+        icon: 'tabler:apps',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1576153192621-7a3be10b356e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
-      alt: 'Colorful Image',
+      src: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1674&q=80',
+      alt: 'React Native Development',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Main Features</h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">React Native Development</h3>
     </Fragment>
   </Content>
 
   <!-- Content Widget **************** -->
 
   <Content
-    isAfterContent
+    id="flutter"
     items={[
       {
-        title: 'Offline Access',
-        description: 'Offer the option for users to download purchased templates for offline use.',
-        icon: 'tabler:wifi-off',
+        title: 'Beautiful UIs',
+        description: 'Create stunning, custom designs with Flutter\'s rich widget library and powerful animation capabilities.',
+        icon: 'tabler:palette',
       },
       {
-        title: 'Secure Cloud Storage',
-        description:
-          'Provide cloud storage for purchased templates, ensuring users can access and back up their templates from anywhere securely.',
-        icon: 'tabler:file-download',
+        title: 'Single Codebase',
+        description: 'Develop for multiple platforms from a single codebase, including iOS, Android, web, and desktop.',
+        icon: 'tabler:code',
       },
       {
-        title: 'Regular Updates',
-        description: 'Continuously add new templates and features to keep the app fresh and engaging for users.',
-        icon: 'tabler:refresh',
+        title: 'Fast Development',
+        description: 'Accelerate development with hot reload and a comprehensive set of pre-built widgets.',
+        icon: 'tabler:rocket',
       },
       {
-        title: 'Wishlist',
-        description: `Allow users to create a wishlist of templates they're interested in, making it easier for them to revisit and potentially purchase later.`,
-        icon: 'tabler:heart',
+        title: 'Native Performance',
+        description: 'Achieve excellent performance with Flutter\'s native compilation and hardware acceleration.',
+        icon: 'tabler:chart-arrows',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1453738773917-9c3eff1db985?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Vintage Image',
+      src: 'https://images.unsplash.com/photo-1618761714954-0b8cd0026356?ixlib=rb-4.0.3&auto=format&fit=crop&w=1674&q=80',
+      alt: 'Flutter Development',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Other features</h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Flutter Development</h3>
     </Fragment>
   </Content>
 
   <!-- Stats Widget ****************** -->
 
   <Stats
-    title="Statistics of our app"
+    title="Our Mobile Development Impact"
     stats={[
-      { amount: '20K', icon: 'tabler:download' },
-      { amount: '18.5K', icon: 'tabler:users' },
-      { amount: '4.7', icon: 'tabler:user-star' },
+      { title: 'Apps Delivered', amount: '50+', icon: 'tabler:device-mobile' },
+      { title: 'Client Satisfaction', amount: '100%', icon: 'tabler:user-star' },
+      { title: 'App Store Rating', amount: '4.8', icon: 'tabler:star' },
     ]}
   />
 
   <!-- Testimonials Widget *********** -->
 
   <Testimonials
-    title="What our users say?"
+    title="Client Success Stories"
     testimonials={[
       {
-        testimonial: `It's made exploring and downloading website templates a breeze. The interface is intuitive, and I had no trouble finding the perfect template for my project. It's an app that truly empowers users.`,
-        name: 'Cary Kennedy',
-        job: 'Film director',
+        testimonial: `ONRISE.software delivered a stunning React Native app that exceeded our expectations. Their expertise in cross-platform development helped us launch on both iOS and Android simultaneously.`,
+        name: 'Sarah Chen',
+        job: 'Product Manager at TechCorp',
         image: {
-          src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-          alt: 'Cary Kennedy Image',
+          src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80',
+          alt: 'Sarah Chen',
         },
       },
       {
-        testimonial: `The app's seamless download process and intuitive layout have made selecting templates an enjoyable experience. Being able to preview and experiment with different designs before committing has saved me time and ensured I get the perfect look for my website.`,
-        name: 'Josh Wilkinson',
-        job: 'Product Manager',
+        testimonial: `The Flutter app they built for us is incredibly smooth and beautiful. Their attention to detail and focus on user experience really shows in the final product.`,
+        name: 'Mark Thompson',
+        job: 'CTO at StartupX',
         image: {
-          src: 'https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-          alt: 'Josh Wilkinson Image',
-        },
-      },
-      {
-        testimonial:
-          'I was able to download and use a professional website template within minutes. The step-by-step process and user-friendly interface made it easy for me to create a website that looks as if it was designed by a pro.',
-        name: 'Sidney Hansen',
-        job: 'Decorator',
-        image: {
-          src: 'https://images.unsplash.com/photo-1512361436605-a484bdb34b5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-          alt: 'Sidney Hansen Image',
+          src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80',
+          alt: 'Mark Thompson',
         },
       },
     ]}
-    callToAction={{
-      target: '_blank',
-      text: 'Read more testimonials',
-      href: 'https://github.com/onwidget/astrowind',
-      icon: 'tabler:chevron-right',
-    }}
   />
 
   <!-- FAQs Widget ******************* -->
 
   <FAQs
-    title="Still have some doubts?"
+    title="Frequently Asked Questions"
     items={[
       {
-        title: 'What does this app do?',
-        description:
-          'This app provides a platform for you to easily browse, purchase, download, and use a wide range of website templates for your projects.',
+        title: 'How do you choose between React Native and Flutter?',
+        description: 'We evaluate factors like your project requirements, timeline, budget, and specific platform needs. React Native is excellent for apps requiring deep platform integration, while Flutter shines in creating custom, branded experiences with complex animations.',
       },
       {
-        title: 'How can this app solve my problem?',
-        description:
-          'This app streamlines the process of finding and implementing professional website designs, saving you time and effort in creating visually appealing and functional websites.',
+        title: 'Do you support both iOS and Android platforms?',
+        description: 'Yes, we have extensive experience in both iOS and Android development. Whether using cross-platform frameworks or native development, we ensure your app works perfectly on both platforms.',
       },
       {
-        title: 'Is it available for my device?',
-        description: `Our app is designed for compatibility across various devices and platforms, ensuring accessibility whether you're using a smartphone, tablet, or computer.`,
+        title: 'What about app store submission and compliance?',
+        description: 'We handle the entire process of preparing and submitting your app to both the Apple App Store and Google Play Store, ensuring compliance with all platform-specific requirements and guidelines.',
       },
       {
-        title: 'What makes this app different from others?',
-        description:
-          'Our app stands out for its user-friendly interface, extensive template collection, and seamless integration of the purchasing and downloading process, making it highly efficient.',
-      },
-      {
-        title: 'Are there any costs involved?',
-        description:
-          'While the app itself may be free to download, there may be costs associated with purchasing specific templates based on your preferences and project requirements.',
+        title: 'Do you provide ongoing maintenance and support?',
+        description: 'Yes, we offer comprehensive maintenance and support packages to keep your app running smoothly, including regular updates, bug fixes, and platform compatibility updates.',
       },
     ]}
   />
@@ -280,18 +238,19 @@ const metadata = {
   <!-- CallToAction Widget *********** -->
 
   <CallToAction
-    id="download"
-    title="Download our app now!"
-    subtitle="Access a variety of stunning templates, simplify your creative process, and elevate your online presence."
-  >
-    <div slot="actions" class="flex max-w-sm gap-4">
-      <Button variant="link" href={appStoreDownloadLink}>
-        <Image src={appStoreImg} alt="App Store Image" width={200} />
-      </Button>
-
-      <Button variant="link" href={googlePlayDownloadLink}>
-        <Image src={googlePlayImg} alt="Google Play Image" width={200} />
-      </Button>
-    </div>
-  </CallToAction>
+    title="Ready to Build Your Mobile App?"
+    subtitle="Let's create an exceptional mobile experience for your users across all platforms."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Start Your Project',
+        href: '/contact',
+      },
+      {
+        variant: 'secondary',
+        text: 'Learn More',
+        href: '#features',
+      },
+    ]}
+  />
 </Layout>
