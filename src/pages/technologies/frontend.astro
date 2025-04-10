@@ -1,0 +1,211 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features from '~/components/widgets/Features.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Brands from '~/components/widgets/Brands.astro';
+
+const metadata = {
+  title: 'Modern Frontend Development | ONRISE.software',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Frontend Excellence"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Start Your Project',
+        href: '/contact',
+      },
+      { text: 'Learn more', href: '#features' },
+    ]}
+  >
+    <Fragment slot="title">
+      Modern <span class="text-accent dark:text-white highlight">Frontend</span> Development with Industry Standards
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      We craft exceptional user experiences using cutting-edge frontend technologies and following Google's Core Web Vitals standards. 
+      Our expertise in React, Vue, and Angular ensures your web applications are fast, responsive, and future-proof.
+    </Fragment>
+
+    <Fragment slot="image">
+      <div class="relative h-0 pb-[56.25%]">
+        <img
+          src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+          class="absolute inset-0 object-cover w-full h-full mb-6 rounded shadow-lg bg-gray-400 dark:bg-slate-700"
+          alt="Modern Frontend Development"
+        />
+      </div>
+    </Fragment>
+  </Hero>
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    title="Modern Frontend Technologies"
+    subtitle="We leverage the most powerful and popular frontend frameworks to build scalable, maintainable applications."
+    columns={3}
+    items={[
+      {
+        title: 'React Development',
+        description: 'Building dynamic, high-performance applications with React and its ecosystem including Next.js, Redux, and React Query.',
+        icon: 'tabler:brand-react',
+      },
+      {
+        title: 'Vue.js Excellence',
+        description: 'Creating elegant, reactive applications with Vue 3, Composition API, and Nuxt.js for server-side rendering.',
+        icon: 'tabler:brand-vue',
+      },
+      {
+        title: 'Angular Solutions',
+        description: 'Developing enterprise-grade applications with Angular, TypeScript, and RxJS for complex state management.',
+        icon: 'tabler:brand-angular',
+      },
+      {
+        title: 'Performance First',
+        description: 'Implementing Core Web Vitals optimization, ensuring fast loading times, interactivity, and visual stability.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Modern Standards',
+        description: 'Adhering to modern web standards with ES6+, TypeScript, and Web Components for future-proof development.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Progressive Web Apps',
+        description: 'Building PWAs that work offline, support push notifications, and provide app-like experiences.',
+        icon: 'tabler:device-mobile',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Core Web Vitals Excellence"
+    subtitle="We prioritize Google's Core Web Vitals metrics to ensure your web applications deliver the best possible user experience."
+    items={[
+      {
+        title: 'Largest Contentful Paint (LCP)',
+        description: 'Optimize loading performance to ensure main content loads within 2.5 seconds for better user engagement.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'First Input Delay (FID)',
+        description: 'Enhance interactivity to achieve response times under 100ms for smooth user interactions.',
+        icon: 'tabler:click',
+      },
+      {
+        title: 'Cumulative Layout Shift (CLS)',
+        description: 'Maintain visual stability with CLS scores under 0.1 for a seamless user experience.',
+        icon: 'tabler:layout',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Our Frontend Development Impact"
+    subtitle="We deliver measurable results that improve user experience and business metrics."
+    stats={[
+      { title: 'Performance Score', amount: '95+' },
+      { title: 'Code Coverage', amount: '100%' },
+      { title: 'Load Time', amount: '<2s' },
+      { title: 'Client Satisfaction', amount: '100%' },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Modern Development Practices"
+    subtitle="We follow industry best practices and use cutting-edge tools to ensure code quality and maintainability."
+    items={[
+      {
+        title: 'Component-Driven Development',
+        description: 'Building reusable, maintainable components with Storybook for consistent UI development.',
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Testing & Quality Assurance',
+        description: 'Comprehensive testing with Jest, React Testing Library, and Cypress for reliable applications.',
+        icon: 'tabler:test-pipe',
+      },
+      {
+        title: 'CI/CD Integration',
+        description: 'Automated deployment pipelines with GitHub Actions, ensuring smooth and reliable releases.',
+        icon: 'tabler:refresh',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Frontend Development FAQs"
+    items={[
+      {
+        title: 'How do you choose between React, Vue, and Angular?',
+        description: 'We evaluate factors like project requirements, team expertise, scalability needs, and long-term maintenance. React is excellent for large-scale applications, Vue shines in progressive enhancement scenarios, and Angular is ideal for enterprise applications requiring strict architecture.',
+      },
+      {
+        title: 'How do you ensure performance optimization?',
+        description: 'We follow Core Web Vitals guidelines, implement code splitting, lazy loading, and use performance monitoring tools. Regular audits with Lighthouse and WebPageTest help maintain optimal performance.',
+      },
+      {
+        title: 'What about browser compatibility?',
+        description: 'We ensure cross-browser compatibility through progressive enhancement, feature detection, and automated testing across different browsers and devices.',
+      },
+      {
+        title: 'Do you support legacy application modernization?',
+        description: 'Yes, we help modernize legacy applications through gradual migration strategies, ensuring business continuity while upgrading to modern frontend technologies.',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </FAQs>
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Start Your Project',
+        href: '/contact',
+      },
+      {
+        text: 'Learn More',
+        href: '#features',
+      },
+    ]}
+  >
+    <Fragment slot="title">Ready to Build Your Modern Frontend?</Fragment>
+
+    <Fragment slot="subtitle">
+      Let's create fast, responsive, and user-friendly web applications that deliver exceptional experiences.
+    </Fragment>
+  </CallToAction>
+</Layout>
