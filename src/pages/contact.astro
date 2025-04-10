@@ -5,19 +5,22 @@ import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
-  title: 'Contact',
+  title: 'Contact ONRISE.software - AI Solutions & Support',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
 
-  <HeroText tagline="Contact" title="Let's Connect!" />
+  <HeroText 
+    tagline="Contact" 
+    title="Ready to Transform Your Business with AI?" 
+  />
 
   <ContactUs
     id="form"
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
+    title="Let's Discuss Your AI Project"
+    subtitle="Whether you're looking to automate processes, enhance decision-making, or create custom AI agents, our team is here to help you achieve your goals."
     inputs={[
       {
         type: 'text',
@@ -29,49 +32,57 @@ const metadata = {
         name: 'email',
         label: 'Email',
       },
+      {
+        type: 'text',
+        name: 'company',
+        label: 'Company',
+      },
     ]}
     textarea={{
-      label: 'Message',
+      label: 'Tell us about your project',
     }}
     disclaimer={{
       label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+        'By submitting this contact form, you acknowledge and agree to the collection of your personal information. We respect your privacy and will handle your data in accordance with our privacy policy.',
     }}
-    description="Our support team typically responds within 24 business hours."
+    description="Our AI consultants typically respond within 1 business day to discuss your needs."
   />
 
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="We are here to help!"
+    title="How Can We Help You?"
     items={[
       {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
+        title: 'AI Solutions Consulting',
+        description: 'Discuss your business challenges with our AI experts and discover how custom AI agents can transform your operations, enhance efficiency, and drive growth.',
+        icon: 'tabler:robot',
       },
       {
-        title: 'Contact sales',
+        title: 'Technical Support',
         description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
+          'Get assistance with AI agent deployment, integration questions, or technical implementation details from our experienced development team.',
+        icon: 'tabler:code',
       },
       {
-        title: 'Technical support',
+        title: 'Partnership Inquiries',
         description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
+          'Explore partnership opportunities and learn how we can collaborate to deliver innovative AI solutions to your clients or integrate with your existing services.',
+        icon: 'tabler:users',
       },
       {
-        title: 'Phone',
-        description: '+1 (234) 567-890',
-        icon: 'tabler:headset',
+        title: 'Schedule a Demo',
+        description: '+1 (415) 555-0123',
+        icon: 'tabler:presentation',
       },
       {
         title: 'Email',
-        description: 'contact@support.com',
+        description: 'contact@onrise.software',
         icon: 'tabler:mail',
       },
       {
         title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
+        description: 'San Francisco, CA',
         icon: 'tabler:map-pin',
       },
     ]}
