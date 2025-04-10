@@ -1,6 +1,6 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: ONRISE.software
+  site: 'https://onrise.software'
   base: '/'
   trailingSlash: false
 
@@ -9,22 +9,22 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: ONRISE.software
+    template: '%s — ONRISE.software'
+  description: "🚀 Leading AI Agency specializing in developing intelligent agents that transform businesses and enhance human capabilities. Custom AI solutions for automation, decision-making, and business growth."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: ONRISE.software
     images:
       - url: '~/assets/images/default.png'
         width: 1200
         height: 628
     type: website
   twitter:
-    handle: '@onwidget'
-    site: '@onwidget'
+    handle: '@onrisesoftware'
+    site: '@onrisesoftware'
     cardType: summary_large_image
 
 i18n:

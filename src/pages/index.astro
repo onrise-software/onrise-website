@@ -13,7 +13,7 @@ import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'ONRISE.software — AI Agency Specializing in AI Agent Development',
+  title: 'ONRISE — Leading AI Agency for Intelligent Agent Development',
   ignoreTitleTemplate: true,
 };
 ---
@@ -31,7 +31,7 @@ const metadata = {
       },
       { text: 'Learn more', href: '#features' },
     ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'ONRISE.software AI Agency' }}
+    image={{ src: '~/assets/images/hero-image.png', alt: 'ONRISE AI Agency' }}
   >
     <Fragment slot="title">
       Building the Future with <span class="text-accent dark:text-white highlight">AI Agents</span>
@@ -39,9 +39,9 @@ const metadata = {
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">ONRISE.software</span> is a leading AI agency specializing in developing intelligent agents that transform businesses and enhance human capabilities.</span
+        <span class="font-semibold">ONRISE</span> is a leading AI agency specializing in developing intelligent agents that transform businesses and enhance human capabilities.</span
       >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">ONRISE.software: AI Innovation.</span>
+      <span class="block mb-1 sm:hidden font-bold text-blue-600">ONRISE: AI Innovation.</span>
       We create custom AI solutions that automate processes, enhance decision-making, and drive business growth.
     </Fragment>
   </Hero>
@@ -55,7 +55,7 @@ const metadata = {
   <Features
     id="features"
     tagline="Our Expertise"
-    title="Why Choose ONRISE.software"
+    title="Why Choose ONRISE"
     subtitle="We combine cutting-edge AI technology with deep industry expertise to deliver solutions that drive real business value."
     items={[
       {
@@ -255,6 +255,13 @@ const metadata = {
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Features2>
+
+  <!-- BlogLatestPosts Widget ******* -->
+
+  <BlogLatestPosts
+    title="Find out more in our Blog"
+    information={`Stay up to date with the latest developments in AI technology and learn how ONRISE can help transform your business.`}
+  />
 
   <!-- FAQs Widget ******************* -->
 
