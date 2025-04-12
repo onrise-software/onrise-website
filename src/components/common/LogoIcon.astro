@@ -1,0 +1,30 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className = 'w-6 h-6' } = Astro.props;
+---
+
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  class={className} 
+  viewBox="0 0 256 256" 
+  fill="none"
+>
+  <g clip-path="url(#clip0_6_12)">
+    <rect width="256" height="256" fill="#1D039B"/>
+    <mask id="mask0_6_12" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="256" height="256">
+      <rect width="255.004" height="256" fill="white"/>
+    </mask>
+    <g mask="url(#mask0_6_12)">
+      <ellipse cx="1.36243" cy="3.05176e-05" rx="205.176" ry="207.168" fill="white"/>
+      <ellipse cx="1.36256" cy="-3.05176e-05" rx="180.261" ry="182.012" fill="#1DE9B6"/>
+    </g>
+  </g>
+  <defs>
+    <clipPath id="clip0_6_12">
+      <rect width="256" height="256" fill="white"/>
+    </clipPath>
+  </defs>
+</svg> 
