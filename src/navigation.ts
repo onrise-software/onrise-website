@@ -181,9 +181,6 @@ export const footerData = {
     { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
   ],
   footNote: `
-    <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right">
-      ONRISE.software
-    </span>
-    · All rights reserved.
+    © ${new Date().getFullYear()} ONRISE.software
   `,
 };
