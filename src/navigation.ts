@@ -176,9 +176,9 @@ export const footerData = {
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
   socialLinks: [
-    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: '#' },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: '#' },
-    { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
+    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://linkedin.com/company/onrise-software' },
+    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onrise-software' },
+    // { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
   ],
   footNote: `
     © ${new Date().getFullYear()} ONRISE.software
