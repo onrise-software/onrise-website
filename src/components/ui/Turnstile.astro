@@ -1,0 +1,15 @@
+---
+interface Props {
+  siteKey: string;
+  theme?: 'light' | 'dark' | 'auto';
+}
+
+const { siteKey, theme = 'auto' } = Astro.props;
+---
+
+<script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<div 
+  class="cf-turnstile" 
+  data-sitekey={siteKey}
+  data-theme={theme}
+></div> 

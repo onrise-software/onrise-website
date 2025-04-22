@@ -7,6 +7,9 @@ import Features2 from '~/components/widgets/Features2.astro';
 const metadata = {
   title: 'Contact ONRISE.software - AI Solutions & Support',
 };
+
+// Replace this with your actual Cloudflare Turnstile site key
+const TURNSTILE_SITE_KEY = '0x4AAAAAABRnBlVtKTVx6LsA';
 ---
 
 <Layout metadata={metadata}>
@@ -46,6 +49,7 @@ const metadata = {
         'By submitting this contact form, you acknowledge and agree to the collection of your personal information. We respect your privacy and will handle your data in accordance with our privacy policy.',
     }}
     description="Our AI consultants typically respond within 1 business day to discuss your needs."
+    turnstileSiteKey={TURNSTILE_SITE_KEY}
   />
 
   <!-- Features2 Widget ************** -->

@@ -1,11 +1,12 @@
 ---
 import type { Form as Props } from '~/types';
 import Button from '~/components/ui/Button.astro';
+import Turnstile from './Turnstile.astro';
 
-const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } = Astro.props;
+const { inputs, textarea, disclaimer, button = 'Contact us', description = '', turnstileSiteKey } = Astro.props;
 ---
 
-<form>
+<form id="contact-form" class="needs-validation" novalidate>
   {
     inputs &&
       inputs.map(
@@ -24,6 +25,7 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
                 autocomplete={autocomplete}
                 placeholder={placeholder}
                 class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+                required
               />
             </div>
           )
@@ -42,6 +44,7 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
           rows={textarea.rows ? textarea.rows : 4}
           placeholder={textarea.placeholder}
           class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+          required
         />
       </div>
     )
@@ -56,6 +59,7 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
             name="disclaimer"
             type="checkbox"
             class="cursor-pointer mt-1 py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+            required
           />
         </div>
         <div class="ml-3">
@@ -66,6 +70,12 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
       </div>
     )
   }
+
+  {turnstileSiteKey && (
+    <div class="mt-6">
+      <Turnstile siteKey={turnstileSiteKey} />
+    </div>
+  )}
 
   {
     button && (
@@ -84,4 +94,56 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
       </div>
     )
   }
+
+  <div id="form-alert" class="mt-3 text-center hidden">
+    <p class="text-sm"></p>
+  </div>
 </form>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  const alert = document.getElementById('form-alert');
+  const alertText = alert?.querySelector('p');
+
+  function showAlert(message: string, type: 'success' | 'error') {
+    if (alert && alertText) {
+      alertText.textContent = message;
+      alert.classList.remove('hidden');
+      alert.classList.remove('text-red-500', 'text-green-500');
+      alert.classList.add(type === 'success' ? 'text-green-500' : 'text-red-500');
+    }
+  }
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const turnstileResponse = formData.get('cf-turnstile-response');
+
+    if (!turnstileResponse) {
+      showAlert('Please complete the Turnstile challenge.', 'error');
+      return;
+    }
+
+    try {
+      // Replace with your actual form submission endpoint
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit form');
+      }
+
+      showAlert('Thank you for your message. We will get back to you soon!', 'success');
+      form.reset();
+      // Reset Turnstile
+      // @ts-expect-error Turnstile types are not available
+      turnstile.reset();
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      showAlert('Failed to submit form. Please try again later.', 'error');
+    }
+  });
+</script>
