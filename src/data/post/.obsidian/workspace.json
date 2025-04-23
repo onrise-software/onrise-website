@@ -1,0 +1,181 @@
+{
+  "main": {
+    "id": "06cb0bd0475857b7",
+    "type": "split",
+    "children": [
+      {
+        "id": "34f30dad6e1b11d1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ea098344091c5175",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "202504-the_unseen_enemy_navigating_the_pitfalls_of_scope_creep_in_software_development.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "202504-the_unseen_enemy_navigating_the_pitfalls_of_scope_creep_in_software_development"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d4f343a097122a91",
+    "type": "split",
+    "children": [
+      {
+        "id": "d9b24924095408a7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a3a0b465023e567c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "cd3b587566ff8ce2",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "c6da4e3ab7e4bf6d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "1a2ffb34564da44e",
+    "type": "split",
+    "children": [
+      {
+        "id": "24b490bb8f9377c9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ae8d25a3407076f8",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "202504-the_unseen_enemy_navigating_the_pitfalls_of_scope_creep_in_software_development.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 202504-the_unseen_enemy_navigating_the_pitfalls_of_scope_creep_in_software_development"
+            }
+          },
+          {
+            "id": "cf3a90fee8887253",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "202504-the_unseen_enemy_navigating_the_pitfalls_of_scope_creep_in_software_development.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 202504-the_unseen_enemy_navigating_the_pitfalls_of_scope_creep_in_software_development"
+            }
+          },
+          {
+            "id": "061a5aed1ca1ca11",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "96907e17fd0f163a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "202504-the_unseen_enemy_navigating_the_pitfalls_of_scope_creep_in_software_development.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 202504-the_unseen_enemy_navigating_the_pitfalls_of_scope_creep_in_software_development"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "ea098344091c5175",
+  "lastOpenFiles": [
+    "Untitled.md",
+    "202504-bridging_the_divide_navigating_communication_challenges_in_software_projects.md",
+    "202504-the_unseen_enemy_navigating_the_pitfalls_of_scope_creep_in_software_development.md",
+    "Untitled.canvas",
+    "get-started-website-with-astro-tailwind-css.md",
+    "landing.md",
+    "useful-resources-to-create-websites.md"
+  ]
+}
