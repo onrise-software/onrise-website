@@ -12,8 +12,8 @@ export const headerData = {
       href: getPermalink('/playbook'),
     },
     {
-      text: 'Build guide',
-      href: getPermalink('/build-guide'),
+      text: 'Dev Hub',
+      href: getPermalink('/dev-hub'),
     },
     {
       text: 'Services',
