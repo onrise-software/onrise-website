@@ -10,7 +10,7 @@ tags:
   - team-collaboration
   - client-management
 metadata:
-  canonical: https://onrise.software/202504-bridging_the_divide_navigating_communication_challenges_in_software_projects
+  canonical: https://onrise.software/202504-bridging_the_divide_navigating_communication_challenges_in_software_projects/
 ---
 
 # Bridging the Divide: Navigating Communication Challenges in Software Projects

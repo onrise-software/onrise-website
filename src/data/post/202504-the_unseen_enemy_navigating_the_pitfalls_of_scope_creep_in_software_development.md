@@ -9,7 +9,7 @@ tags:
   - scope-creep
   - client-management
 metadata:
-  canonical: https://onrise.software/202504-the_unseen_enemy_navigating_the_pitfalls_of_scope_creep_in_software_development
+  canonical: https://onrise.software/202504-the_unseen_enemy_navigating_the_pitfalls_of_scope_creep_in_software_development/
 ---
 
 Imagine setting sail on a well-charted course, only to find your vessel drifting further and further off track with each passing wave. This, in essence, is **scope creep** in software development – the insidious and often gradual expansion of a project's requirements beyond its initially agreed-upon boundaries. While seemingly small additions might feel harmless at the outset, unchecked scope creep can sink even the most promising software ventures.
