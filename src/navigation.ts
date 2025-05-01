@@ -17,7 +17,7 @@ export const headerData = {
     },
     {
       text: 'Services',
-      href: getPermalink('/services'),
+      href: getPermalink('/services/'),
     },
     {
       text: 'Technologies',
@@ -156,11 +156,11 @@ export const footerData = {
     {
       title: 'Services',
       links: [
-        { text: 'AI Solutions', href: getPermalink('/services#ai') },
-        { text: 'Custom Software', href: getPermalink('/services#software') },
-        { text: 'Cloud Solutions', href: getPermalink('/services#cloud') },
-        { text: 'Mobile Development', href: getPermalink('/services#mobile') },
-        { text: 'DevOps', href: getPermalink('/services#devops') },
+        { text: 'AI Solutions', href: getPermalink('/services/#ai') },
+        { text: 'Custom Software', href: getPermalink('/services/#software') },
+        { text: 'Cloud Solutions', href: getPermalink('/services/#cloud') },
+        { text: 'Mobile Development', href: getPermalink('/services/#mobile') },
+        { text: 'DevOps', href: getPermalink('/services/#devops') },
       ],
     },
     {
