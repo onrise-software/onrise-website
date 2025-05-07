@@ -1,5 +1,6 @@
 import { link } from 'node:fs';
 import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { text } from 'node:stream/consumers';
 
 export const headerData = {
   links: [
@@ -8,12 +9,21 @@ export const headerData = {
       href: getPermalink('/'),
     },
     {
-      text: 'Playbook',
-      href: getPermalink('/playbook'),
+      text: 'Insights',
+      href: getPermalink('/insights/'),
     },
     {
-      text: 'Dev Hub',
-      href: getPermalink('/dev-hub'),
+      text: 'Resources',
+      links: [
+        {
+          text: 'Dev Hub',
+          href: getPermalink('/dev-hub/'),
+        },
+        {
+          text: 'Playbook',
+          href: getPermalink('/playbook/'),
+        },
+      ],
     },
     {
       text: 'Services',
@@ -133,12 +143,8 @@ export const headerData = {
       text: 'About us',
       href: getPermalink('/about'),
     },
-    {
-      text: 'Contact',
-      href: getPermalink('/contact'),
-    },
   ],
-  actions: [{ text: 'Contact', href: getPermalink('/contact'), target: '_self' }],
+  actions: [{ text: 'Free 30-Min Consult', href: getPermalink('/contact'), target: '_self' }],
 };
 
 export const footerData = {
