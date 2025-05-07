@@ -1,6 +1,7 @@
 ---
 title: 'Privacy Policy'
 layout: '~/layouts/MarkdownLayout.astro'
+description: 'Privacy policy for ONRISE - Your trusted partner for AI-enabled IT outsourcing services in Vietnam. Learn how we protect your data while delivering innovative technology solutions.'
 ---
 
 _Last updated_: January 06, 2023
