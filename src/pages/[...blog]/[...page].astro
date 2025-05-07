@@ -25,6 +25,7 @@ const currentPage = page.currentPage ?? 1;
 
 const metadata = {
   title: `Blog${currentPage > 1 ? ` — Page ${currentPage}` : ''}`,
+  description: "Explore insights on IT outsourcing in Vietnam, featuring AI-powered solutions, digital transformation strategies, and expert perspectives on leveraging Vietnam's tech talent for global innovation.",
   robots: {
     index: blogListRobots?.index && currentPage === 1,
     follow: blogListRobots?.follow,
