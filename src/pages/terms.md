@@ -1,6 +1,7 @@
 ---
 title: 'Terms and Conditions'
 layout: '~/layouts/MarkdownLayout.astro'
+description: 'Terms and conditions for ONRISE - Your trusted partner for AI-enabled IT outsourcing services in Vietnam. Learn about our service agreements, privacy policies, and user responsibilities.'
 ---
 
 _Last updated_: January 06, 2023
